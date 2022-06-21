@@ -1,0 +1,97 @@
+@import "./_reset"
+
+body
+    background-color: #eee
+    text-align: left
+    padding: 10px
+    display: grid
+    @media ( max-width: 370px  )
+        grid-template-columns: 300px
+     
+.header, .topnav
+
+.header
+    height: 15em
+    background-color: #fff
+
+    text-align: center
+    padding: 40px 0 20px 0
+    margin-top: 20px
+    h1
+        font-size: 3em
+    
+    p
+        font-size: 0.8em
+
+.topnav
+    background-color: #333
+    display: flex
+    justify-content: space-between  
+    align-items: center
+    a   
+        padding: 10px
+        color: #fff
+
+        &:active
+            background-color: #eee
+            color: #000
+
+///conteiners com texto e img principais 
+.row
+    margin-top: 10px 
+.leftcolumn
+    display: flex
+    flex-direction: column
+    
+    .card
+        padding: 10px
+        background-color: #fff
+        margin: 10px 0
+
+        h2
+            margin: 10px 0
+        h5
+            @extend h2
+
+        .fakeimg
+            margin: 15px 0
+            height: 10em
+            background-color: #666
+        
+
+        p
+            @extend h5
+
+//// conteudo lateral 
+
+.rightcolumn
+    .card
+        padding: 10px
+        background-color: #fff
+        margin: 10px 0
+        h2, h3
+            margin: 10px 0
+        
+        .fakeimg
+            margin: 15px 0
+            height: 5em
+            background-color: #666
+
+.row
+    display: grid
+    grid-gap: 10px
+
+    @media ( max-width: 1250px  )
+        grid-template-columns: 4fr 1fr
+    
+    @media ( max-width: 650px  )
+        grid-template-columns: 1fr
+    
+    
+    
+.footer
+    padding: 20px
+    background-color: #666
+
+    h2
+        text-align: center

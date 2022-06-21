@@ -1,0 +1,221 @@
+@charset "UTF-8"
+@import "./base/glob"
+@import "./libs/glob"
+
+
+//////////////conteinar geral c_total
+.c__total
+    width: 100%
+    max-width: 1200px
+    margin: 0 auto
+    background-color: $bg-secondary
+   
+    
+//// header logo e foto da mellyssa
+.header
+    @include flex-between()
+    background-color: $bg-primery 
+    padding: 2px 0
+        
+    /////////////////////////MENU HAMBURGUER 
+    .menu__hamburguer
+        width: 50px
+        height: 27px
+        display: none
+        margin-right: 20px
+        cursor: pointer
+        font-family: 'Poppins', sans-serif
+        color: $color-secondary
+        background-color: $bg-primery
+        border: none
+        @include md( 545px)
+            display: block
+        ////adicionar efeito au menu hamburguer ao cli
+
+
+    ////////////////////////////
+    .header__logo
+        padding-left: 50px
+    .header__pessoa
+        @include flex-between()
+        color: $color-secondary
+
+        @include md( 545px)
+            display: none
+
+
+        width: 300px
+        padding-right: 50px
+
+        h3
+            font-family: 'poetsen'
+            font-size: 20px
+        #header__links
+            img
+                width: 60px
+                border: 1px solid $bd-primery
+                border-radius: 50px
+
+////////inicio navbar 
+.navbar
+    @include flex-between()
+    min-width: 300px
+    width: 400px
+    margin: 0 auto
+    padding: 10px
+    background-color: $bg-primery
+    border-radius: 0 0 10px 10px
+
+    &.active
+        display: block
+        
+        @include md(545px)  
+            width: 100%
+            height: 100vh
+            position: absolute
+            
+            z-index: 100
+            .nav__links
+                display: block
+                padding: 10px 0
+                border-bottom: 1px solid #ccc
+                &:hover
+                    background-color: #a6a6a6
+    
+
+    a
+        font-size: 14px
+        color: $color-secondary
+        &:hover
+            color: $color-hover
+
+    @include md( 545px)
+        display: none
+/////introdução
+.intro
+    @include flex-between()
+    @include md-2(576px, 945px)
+        flex-direction: column
+
+    .intro__text
+        width: 66%
+        padding-left: 20px
+        @include md( 575px)
+            width: 100%
+
+        @include md-2(576px, 945px)
+            width: 100%
+            
+            order: 2
+            
+    .intro__img
+        @include md( 575px)
+            display: none
+        @include md-2(576px, 945px)
+            width: 100%
+            text-align: center
+            order: 1
+
+/////subject conteudo principal
+
+.subject
+    @include flex-between()
+    flex-direction: column
+
+    .subject__items
+        @include flex-between()
+        flex-wrap: wrap
+        margin: 30px 0
+
+/////inicio guidance
+
+.guidance
+    @extend .subject
+    margin: 0 
+    padding: 80px 0
+    background-color: $bg-primery
+    color: white
+
+    h2
+        margin: 0 0 60px 0
+
+    .guidance__figure
+        margin: 40px
+        display: flex
+
+
+//////////inicio contact forms
+.contact
+    .contact__form
+        @include flex-between()
+        justify-content: left
+        @include md( 575px)
+            flex-direction: column
+        
+        @include md-2(576px, 945px)
+            flex-direction: column
+            
+        #field
+            display: flex
+            flex-direction: column
+            gap: 30px
+            width: 400px
+            border: none
+            @include md(575px)
+                width: 100%
+
+           
+
+            input
+                height: 40px
+                width: 100%
+                border: none
+                padding: 6px 2px
+                background-color: pink
+                border-bottom: 1px solid
+                &[type='radio']
+                    width: 20px
+                    margin: 0
+        #field__envio
+            margin-left: 10%
+            width: 90%
+            border: none
+            display: flex
+            align-items: center
+            @include md( 575px)
+                flex-direction: column
+                margin: 0 auto
+                
+            @include md-2(576px, 945px)
+                flex-direction: column
+
+            textarea
+                @include md( 575px)
+                    width: 100%
+                    margin-bottom: 20px 
+
+            
+            input[type='submit']
+                margin-left: 22%
+                padding: 10px 35px
+                border-radius: 10px
+                box-shadow: 4px 4px 10px #333
+                background-color: #14d53b
+                @include md( 575px)
+                margin: 0 auto
+
+.rodape
+    background-color: $bg-primery
+    
+    padding: 80px 0
+    @include flex-between()
+    flex-direction: column
+
+    h2, span
+        color: white
+
+    span
+        a
+            img
+                width: 30px
+                margin: 0 10px

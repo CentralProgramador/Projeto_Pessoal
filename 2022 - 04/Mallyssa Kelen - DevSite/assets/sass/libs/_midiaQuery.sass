@@ -1,0 +1,14 @@
+@mixin md($valor-px)
+    @media (max-width: $valor-px)
+        @content
+        
+
+@mixin md-2($min, $max)
+    @media ( min-width: $min ) and (max-width: $max)
+        @content
+        
+
+@mixin xl($min, $max)
+    @media ( min-width: $min  ) and ( max-width: $max)
+        @content
+    

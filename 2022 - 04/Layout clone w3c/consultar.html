@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Document</title>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="site feito para trabalhar habilidades de layout" />
+    <meta name="keywords" content="HTML, CSS, Javascript, SASS" />
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/output.css">
+
+    <!--html5shiv-->
+    <!--[if lt IE 9]>
+        <script src="./assets/js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!--compilação babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+
+
+    <!--inicio menu topo-->
+    <header class="topo" >
+        <nav class="navbar">
+
+            <div class="logo"><a href=""><img src="./img/logo.png" alt=""></a></div>
+            
+            <a class="nav-links " href="./index.html">Cadastrar</a>
+            <a class="nav-links selecionado" href="./consultar.html">Consultar</a>
+        
+        </nav>
+    </header>
+
+
+    <!--parte para cadastrar produto-->
+    <main class="visual">
+
+        <h1 class="titulo">Consultar Produtos</h1>
+
+        <form action="" method="get" autocomplete="" id="forms">
+    
+            <!--inicio ano-->
+            <select id="ano" autofocus>
+                <option value="">Ano</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+            </select>
+            <!--inicio mes-->
+            <select id="mes">
+                <option value="">Mês</option>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+            <!--inicio dia-->
+            <input type="number"  id="dia" min="1" max="31" placeholder="Dia">
+            
+            <!--inicio tipo-->
+            <select class="form-control" id="tipo">
+                <option>Tipo</option>
+                <option value="1">Alimentação</option>
+                <option value="2">Educação</option>
+                <option value="3">Lazer</option>
+                <option value="4">Saúde</option>
+                <option value="5">Transporte</option>
+            </select>
+            <!--inicio descrição-->
+            <input type="text"  id="descricao" placeholder="Descrição">
+
+            <!--inicio valor gasto-->
+            <input type="number" id="gasto" min="0"  placeholder="Valor gasto">
+
+            <!--botão de envio-->
+            <button type="submit" id="btn-envio" onclick="cadastrarDespesa()">
+                <img src="./img/enviar-mensagem.png" alt="">
+            </button>
+        
+
+
+        </form>
+
+
+
+    </main>
+
+    <footer class="rodape">
+        <h4>Todos os registro de Patrimônio</h4>
+    </footer>
+
+    <script type="text/babel" src="./assets/js/main.js"></script>
+    <script src="./assets/js/flexbility.min.js"></script>
+</body>
+</html>
